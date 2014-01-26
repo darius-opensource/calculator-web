@@ -38,6 +38,6 @@ public class CalculatorPage {
 	}
 	
 	public String getDisplayAmount() {
-		return webDriver.findElement(By.id("display")).getValue();
+		return webDriver.findElement(By.id("display")).getText();
 	}
 }
