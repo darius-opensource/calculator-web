@@ -75,7 +75,7 @@ public class CalculatorIntegrationTest {
 	}
 
 	@Test
-	public void testEnterDigits() {
+	public void testEnterDigits() throws IOException {
 		CalculatorPage page = getHomePage();
 		
 File scrFile = ((TakesScreenshot)webDriver).getScreenshotAs(OutputType.FILE);
