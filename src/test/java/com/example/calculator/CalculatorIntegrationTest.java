@@ -14,7 +14,8 @@
    limitations under the License.
  */
 package com.example.calculator;
-
+import java.io.*;
+import org.apache.commons.io.FileUtils;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.After;
@@ -66,6 +67,9 @@ public class CalculatorIntegrationTest {
 	@Test
 	public void testEnterDigits() {
 		CalculatorPage page = getHomePage();
+		
+File scrFile = ((TakesScreenshot)webDriver).getScreenshotAs(OutputType.FILE);
+FileUtils.copyFile(scrFile, new File("screenshot.png"));		
 		
 		page.pressButton('1');
 		page.pressButton('2');
